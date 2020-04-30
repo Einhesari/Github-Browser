@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".presentation.AuthActivity">
+        <activity android:name=".presentation.auth.AuthActivity">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/appCompatImageView"
+        android:layout_width="@dimen/auth_github_logo_size"
+        android:layout_height="@dimen/auth_github_logo_size"
+        android:layout_marginTop="180dp"
+        android:src="@drawable/ic_github"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/materialButton"
+        android:layout_width="@dimen/auth_login_btn_width"
+        android:layout_height="@dimen/auth_login_btn_height"
+        android:layout_marginTop="164dp"
+        android:background="@drawable/bg_custom_card"
+        android:backgroundTint="@color/github_black"
+        android:text="@string/auth_btn_text"
+        android:textColor="@color/colorSurface"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appCompatImageView" />
+</androidx.constraintlayout.widget.ConstraintLayout>

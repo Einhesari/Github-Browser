@@ -10,13 +10,13 @@ import android.view.ViewGroup
 /**
  * A simple [Fragment] subclass.
  */
-class LoginFragment : Fragment() {
+class GithubWebviewFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_login, container, false)
+        return inflater.inflate(R.layout.fragment_github_webview, container, false)
     }
 
 }

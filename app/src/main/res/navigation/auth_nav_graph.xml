@@ -9,5 +9,16 @@
         android:id="@+id/loginFragment"
         android:name="alfarobot.gss.com.githubbrowser.presentation.auth.LoginFragment"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login" />
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_githubWebviewFragment"
+            app:destination="@id/githubWebviewFragment"
+            app:launchSingleTop="true"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/githubWebviewFragment"
+        android:name="alfarobot.gss.com.githubbrowser.presentation.auth.GithubWebviewFragment"
+        android:label="fragment_github_webview"
+        tools:layout="@layout/fragment_github_webview" />
 </navigation>

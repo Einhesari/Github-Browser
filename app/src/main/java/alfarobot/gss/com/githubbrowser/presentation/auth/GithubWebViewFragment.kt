@@ -14,6 +14,7 @@ import android.webkit.WebView
 import android.webkit.WebViewClient
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import kotlinx.android.synthetic.main.fragment_github_webview.*
 
 class GithubWebViewFragment : Fragment() {
 
@@ -49,13 +50,14 @@ class GithubWebViewFragment : Fragment() {
                     return false
                 }
             } ?: run {
+                webviewLoading.show()
                 return super.shouldOverrideUrlLoading(view, request)
             }
         }
 
         override fun onPageFinished(view: WebView?, url: String?) {
             super.onPageFinished(view, url)
-            //TODO Hide Loading
+            webviewLoading.hide()
         }
 
         override fun onReceivedError(
@@ -64,6 +66,7 @@ class GithubWebViewFragment : Fragment() {
             error: WebResourceError?
         ) {
             super.onReceivedError(view, request, error)
+            webviewLoading.hide()
             //TODO GO BACK
         }
     }

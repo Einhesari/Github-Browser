@@ -1,27 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<layout>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-
         <variable
             name="host"
             type="alfarobot.gss.com.githubbrowser.presentation.auth.GithubWebViewFragment" />
     </data>
 
-    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".presentation.auth.GithubWebViewFragment">
+
 
         <WebView
             android:id="@+id/githubWebview"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:loadWebUrl="@{host.url}"
-            android:webViewClient="@{host.webviewClient}">
+            android:webViewClient="@{host.webviewClient}" />
 
-        </WebView>
-    </FrameLayout>
+        <androidx.core.widget.ContentLoadingProgressBar
+            android:id="@+id/webviewLoading"
+            style="@style/Widget.AppCompat.ProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

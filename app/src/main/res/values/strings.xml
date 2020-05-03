@@ -2,6 +2,7 @@
     <string name="app_name">Github Browser</string>
 
     <string name="auth_btn_text">Login With Github</string>
-
+    <string name="app_prefs">APP_PREFS</string>
+    <string name="access_token_key">AccessTokenKey</string>
 
 </resources>

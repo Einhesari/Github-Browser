@@ -1,8 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".presentation.auth.GithubWebviewFragment">
 
-</FrameLayout>
+<layout>
+
+    <data>
+
+        <variable
+            name="host"
+            type="alfarobot.gss.com.githubbrowser.presentation.auth.GithubWebViewFragment" />
+    </data>
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".presentation.auth.GithubWebViewFragment">
+
+        <WebView
+            android:id="@+id/githubWebview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:loadWebUrl="@{host.url}"
+            android:webViewClient="@{host.webviewClient}">
+
+        </WebView>
+    </FrameLayout>
+</layout>

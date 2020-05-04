@@ -10,4 +10,9 @@ class AuthViewModel @Inject constructor(private val authUseCase: AuthUseCase) : 
         return authUseCase.userAuthStatus()
     }
 
+    fun getAccessCode(code: String?) {
+        code?.let {
+
+        }
+    }
 }

@@ -14,6 +14,6 @@ class AuthRepositoryImpl @Inject constructor(
     override fun getAuthStatus(): Boolean {
         val accessToken =
             sharedPrefsDataSource.getPref(context.getString(R.string.access_token_key))
-        return accessToken.equals("")
+        return !accessToken.equals("")
     }
 }
